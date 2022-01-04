@@ -820,7 +820,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5442888054421715059, guid: a5dee5ec893239b47a1c6de0d7355778, type: 3}
       propertyPath: m_Name
-      value: Engine
+      value: enginePart
       objectReference: {fileID: 0}
     - target: {fileID: 5465350378830346690, guid: a5dee5ec893239b47a1c6de0d7355778, type: 3}
       propertyPath: m_RootOrder
@@ -3501,7 +3501,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5442888054421715059, guid: a5dee5ec893239b47a1c6de0d7355778, type: 3}
       propertyPath: m_Name
-      value: Wings
+      value: wingsPart
       objectReference: {fileID: 0}
     - target: {fileID: 5465350378830346690, guid: a5dee5ec893239b47a1c6de0d7355778, type: 3}
       propertyPath: m_RootOrder
@@ -3826,7 +3826,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5442888054421715059, guid: a5dee5ec893239b47a1c6de0d7355778, type: 3}
       propertyPath: m_Name
-      value: Nose
+      value: nosePart
       objectReference: {fileID: 0}
     - target: {fileID: 5465350378830346690, guid: a5dee5ec893239b47a1c6de0d7355778, type: 3}
       propertyPath: m_RootOrder
