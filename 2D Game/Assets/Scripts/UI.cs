@@ -1,14 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
 public class UI : MonoBehaviour
 {
-    public TextMeshProUGUI scoreText;
+    public GameObject partsUI;
+    // part sprites for render, 0=eng, 1=nose, 2=wngs
+    public Sprite[] parts = new Sprite[3];
+    public GameObject keysUI;
+    // key sprites for render, 0=blue, 1=green, 2=red, 3=yellow
+    public Sprite[] keys = new Sprite[4];
 
-    public void SetScoreText(int score)
+    private void addKey(int key)
     {
-        scoreText.text = score.ToString();
+        SpriteRenderer sr = keysUI.AddComponent<SpriteRenderer>();
+        sr.sprite = keys[key];
     }
 }

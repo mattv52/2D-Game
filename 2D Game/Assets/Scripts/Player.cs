@@ -64,7 +64,6 @@ public class Player : MonoBehaviour
                 parts[2] = true;
                 break;
         }
-        ui.SetScoreText(0);
     }
     public void GetKey(string color)
     {
