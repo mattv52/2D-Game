@@ -7,8 +7,8 @@ public class Rocket : MonoBehaviour
     public GameObject fixedRocket;
     public GameObject brokenRocket;
     public Collider2D col;
-    // Parts displayed above, 0=eng, 1=nose, 2=lwng, 3=rwng
-    public SpriteRenderer[] parts = new SpriteRenderer[4];
+    // Parts displayed above, 0=eng, 1=nose, 2=wng
+    public SpriteRenderer[] parts = new SpriteRenderer[3];
 
 
     // Start is called before the first frame update
@@ -50,7 +50,6 @@ public class Rocket : MonoBehaviour
 
             case "wing":
                 parts[2].color = Color.white;
-                parts[3].color = Color.white;
                 break;
         }
     }
