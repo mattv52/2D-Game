@@ -331,7 +331,6 @@ MonoBehaviour:
   parts:
   - {fileID: 3854350540222544749}
   - {fileID: 3854350541264006138}
-  - {fileID: 0}
   - {fileID: 3854350541058065494}
 --- !u!61 &3854350540928434053
 BoxCollider2D:
