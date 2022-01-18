@@ -20,6 +20,7 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Logic for moving between 2 points
         if(movingToTarget)
         {
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
@@ -30,8 +31,11 @@ public class Enemy : MonoBehaviour
             if (transform.position == startPosition) movingToTarget = true;
         }
     }
+
+    // Check for collision with another object
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        // Check collision is with Player
         if (collision.gameObject.CompareTag("Player"))
         {
             collision.gameObject.GetComponent<Player>().GameOver();

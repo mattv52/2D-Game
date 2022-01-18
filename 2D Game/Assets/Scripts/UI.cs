@@ -13,6 +13,7 @@ public class UI : MonoBehaviour
     public Sprite[] keys = new Sprite[4];
     private int numKeys = 0;
 
+    // Start is called before the first frame update
     private void Start()
     {
         addKey(2);

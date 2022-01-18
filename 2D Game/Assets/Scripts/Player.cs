@@ -27,27 +27,34 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // If fall bellow screen, die
         if (transform.localPosition.y < tileMap.cellBounds.y-3) GameOver();
         
+        // Jump logic
         if (Input.GetKeyDown(KeyCode.UpArrow) && IsGrounded())
         {
             rig.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
 
+        // Ensure sprite is facing correct way
         if (rig.velocity.x > 0) sr.flipX = false;
         else if (rig.velocity.x < 0) sr.flipX = true;
     }
+
+    // Function to check if player is on the ground
     bool IsGrounded()
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position + new Vector3(0, -0.1f, 0), Vector2.down, 0.2f);
         return hit.collider != null;
     }
 
+    // Triggers gameover and resets the stage
     public void GameOver()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
+    // Adds specific part to player
     public void GetPart(string part)
     {
         switch (part)
@@ -65,6 +72,8 @@ public class Player : MonoBehaviour
                 break;
         }
     }
+
+    // Adds specific key to player
     public void GetKey(string color)
     {
         switch (color)
@@ -86,6 +95,8 @@ public class Player : MonoBehaviour
                 break;
         }
     }
+
+    // Checks player has specific key
     public bool HasKey(string color)
     {
         switch (color)
