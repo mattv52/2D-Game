@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Rocket : MonoBehaviour
 {
-    public Collider2D col;
     public UI ui;
     // Parts displayed above, 0=eng, 1=nose, 2=wng
     public SpriteRenderer[] parts = new SpriteRenderer[3];
@@ -41,7 +40,6 @@ public class Rocket : MonoBehaviour
     {
         fixedRocket.SetActive(true);
         brokenRocket.SetActive(false);
-        col.enabled = false;
     }
 
     // Highlights specific part above the broken rocket

@@ -31,9 +31,9 @@ public class Player : MonoBehaviour
     {
         // If fall bellow screen, die
         if (transform.localPosition.y < tileMap.cellBounds.y-3) GameOver();
-        
+
         // Jump logic
-        if (Input.GetKeyDown(KeyCode.UpArrow) && IsGrounded())
+        if (Input.GetKeyDown(KeyCode.UpArrow) && IsGrounded() || Input.GetKeyDown(KeyCode.Space) && IsGrounded()) 
         {
             rig.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }

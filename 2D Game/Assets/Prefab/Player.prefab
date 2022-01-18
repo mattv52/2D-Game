@@ -249,9 +249,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 346fbb1ac9a1c29478ce0660d412dce9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
-  rig: {fileID: 5765068819645706309}
-  jumpForce: 5
   sr: {fileID: 5765068819265386284}
-  score: 0
-  ui: {fileID: 0}
+  rig: {fileID: 5765068819645706309}
+  ui: {fileID: 8024596112407062897, guid: 104eaa4ba7d104846827263d1d29620d, type: 3}
+  tileMap: {fileID: 0}
+  moveSpeed: 4
+  jumpForce: 5
+  parts: 000000
+  keys: 00000000
