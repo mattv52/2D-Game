@@ -63,14 +63,17 @@ public class Player : MonoBehaviour
         {
             case "engine":
                 parts[0] = true;
+                ui.addPart(0);
                 break;
 
             case "nose":
                 parts[1] = true;
+                ui.addPart(1);
                 break;
 
             case "wing":
                 parts[2] = true;
+                ui.addPart(2);
                 break;
         }
     }
@@ -125,6 +128,32 @@ public class Player : MonoBehaviour
             
             default:
                 return false;
+        }
+    }
+
+    public void useKey(string color)
+    {
+        switch (color)
+        {
+            case "blue":
+                keys[0] = false;
+                ui.removeKey(0);
+                break;
+
+            case "green":
+                keys[1] = false;
+                ui.removeKey(1);
+                break;
+
+            case "red":
+                keys[2] = false;
+                ui.removeKey(2);
+                break;
+
+            case "yellow":
+                keys[3] = false;
+                ui.removeKey(3);
+                break;
         }
     }
 }

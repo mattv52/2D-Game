@@ -325,13 +325,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1c61919334a4a94ca6a2cab58dab8ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fixedRocket: {fileID: 3854350541124995334}
-  brokenRocket: {fileID: 3854350541430068670}
   col: {fileID: 0}
+  ui: {fileID: 8024596112407062897, guid: 104eaa4ba7d104846827263d1d29620d, type: 3}
   parts:
   - {fileID: 3854350540222544749}
   - {fileID: 3854350541264006138}
   - {fileID: 3854350541058065494}
+  fixedRocket: {fileID: 3854350541124995334}
+  brokenRocket: {fileID: 3854350541430068670}
 --- !u!61 &3854350540928434053
 BoxCollider2D:
   m_ObjectHideFlags: 0

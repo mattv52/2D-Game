@@ -5,6 +5,7 @@ using UnityEngine;
 public class Rocket : MonoBehaviour
 {
     public Collider2D col;
+    public UI ui;
     // Parts displayed above, 0=eng, 1=nose, 2=wng
     public SpriteRenderer[] parts = new SpriteRenderer[3];
     
@@ -31,6 +32,7 @@ public class Rocket : MonoBehaviour
             if (playersParts[0]) collectedPart("engine");
             if (playersParts[1]) collectedPart("nose");
             if (playersParts[2]) collectedPart("wing");
+            ui.removeParts();
         }
     }
 
