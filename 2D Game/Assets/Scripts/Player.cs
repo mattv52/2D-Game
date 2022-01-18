@@ -6,16 +6,18 @@ using UnityEngine.Tilemaps;
 
 public class Player : MonoBehaviour
 {
-    public float moveSpeed;
-    public Rigidbody2D rig;
-    public float jumpForce;
     public SpriteRenderer sr;
+    public Rigidbody2D rig;
+    public UI ui;
+    public Tilemap tileMap;
+    
+    public float moveSpeed;
+    public float jumpForce;
+    
     // If collected part, 0=eng, 1=nose, 2=wngs
     public bool[] parts = new bool[3];
     // If collected keys, 0=blue, 1=green, 2=red, 3=yellow
     public bool[] keys = new bool[4];
-    public UI ui;
-    public Tilemap tileMap;
 
     private void FixedUpdate()
     {
@@ -80,18 +82,22 @@ public class Player : MonoBehaviour
         {
             case "blue":
                 keys[0] = true;
+                ui.addKey(0);
                 break;
 
             case "green":
                 keys[1] = true;
+                ui.addKey(1);
                 break;
 
             case "red":
                 keys[2] = true;
+                ui.addKey(2);
                 break;
 
             case "yellow":
                 keys[3] = true;
+                ui.addKey(3);
                 break;
         }
     }
@@ -102,15 +108,19 @@ public class Player : MonoBehaviour
         switch (color)
         {
             case "blue":
+                ui.removeKey(0);
                 return keys[0];
 
             case "green":
+                ui.removeKey(1);
                 return keys[1];
 
             case "red":
+                ui.removeKey(2);
                 return keys[2];
 
             case "yellow":
+                ui.removeKey(3);
                 return keys[3];
             
             default:

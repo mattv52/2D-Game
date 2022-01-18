@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Rocket : MonoBehaviour
 {
-    public GameObject fixedRocket;
-    public GameObject brokenRocket;
     public Collider2D col;
     // Parts displayed above, 0=eng, 1=nose, 2=wng
     public SpriteRenderer[] parts = new SpriteRenderer[3];
+    
+    public GameObject fixedRocket;
+    public GameObject brokenRocket;
 
 
     // Start is called before the first frame update

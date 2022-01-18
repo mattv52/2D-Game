@@ -14,7 +14,7 @@ public class Gate : MonoBehaviour
         {
             // Check that player has appropriate key
             if (collision.gameObject.GetComponent<Player>().HasKey(keyColor))
-            { 
+            {
                 Destroy(gameObject);
             }
         }
